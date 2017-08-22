@@ -1,0 +1,13 @@
+{
+    "name": "digota/digota-php",
+    "description": "php client for digota",
+    "require": {
+      "grpc/grpc": "^v1.3.0",
+      "google/protobuf": "^v3.4.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "": "src/"
+      }
+    }
+  }
