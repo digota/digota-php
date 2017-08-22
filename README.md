@@ -9,6 +9,8 @@ PREREQUISITES
 * `phpize`
 * `pecl`
 * `phpunit`
+* `composer`
+* `protoc`
 
 INSTALL
 -------
