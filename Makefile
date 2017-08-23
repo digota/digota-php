@@ -20,8 +20,8 @@ php:
 	(rm -rf src\*)
 
 # pull digota
-#	(git clone https://github.com/digota/digota.git github.com/digota/digota)
-	(git clone -b fix-proto-lowercase https://github.com/digota/digota.git github.com/digota/digota)
+	(git clone https://github.com/digota/digota.git github.com/digota/digota)
+#	(git clone -b fix-proto-lowercase https://github.com/digota/digota.git github.com/digota/digota)
 
 # create clean proto files
 	(grep -vw 'import "github.com/gogo/protobuf/gogoproto/gogo.proto";' github.com/digota/digota/order/orderpb/order.proto | sed -e 's/\[[^][]*\]//g' > github.com/digota/digota/order/orderpb/order.clean.proto)
