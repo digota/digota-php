@@ -32,7 +32,6 @@ composer require digota/digota-php
 ### Example
 
 ```php
-
 <?php
 
 require dirname(__FILE__).'/vendor/autoload.php';
