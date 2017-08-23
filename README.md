@@ -40,7 +40,6 @@ require dirname(__FILE__).'/vendor/autoload.php';
  $client = new \Productpb\ProductServiceClient('localhost:3051', [
       // send client cert
      'credentials' => Grpc\ChannelCredentials::createSsl(file_get_contents(dirname(__FILE__).'/client.com.pem'))
-      // communicating with digota running with --insecure flag
      //'credentials' => Grpc\ChannelCredentials::createInsecure()
  ]);
 
@@ -52,25 +51,3 @@ var_dump($client->Get($request));
 
 // sync
 var_dump($client->Get($request)->wait());
-
-
-```
-
-   ```sh
-   $ [sudo] pecl install grpc
-   ```
-
- - Clone this repository
-
-   ```sh
-   $ git clone -b $(curl -L http://grpc.io/release) https://github.com/grpc/grpc
-   ```
-
- - Install composer
-
-   ```
-   $ cd examples/php
-   $ curl -sS https://getcomposer.org/installer | php
-   $ php composer.phar install
-   ```
-
